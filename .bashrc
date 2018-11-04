@@ -112,3 +112,6 @@ for file in ~/.{bash_prompt,aliases,functions,path,dockerfunc,extra,exports}; do
 	fi
 done
 unset file
+
+# grit
+source ~/WebstormProjects/grit/grit.sh

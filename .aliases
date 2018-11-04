@@ -30,8 +30,21 @@ alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date
 alias pubip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="sudo ifconfig | grep -Eo 'inet (addr:)?([0-9]*\\.){3}[0-9]*' | grep -Eo '([0-9]*\\.){3}[0-9]*' | grep -v '127.0.0.1'"
 
-# move file interactive
-alias mv='mv -i'
+# paths
+alias p="cd ~/WebstormProjects"
+alias pg="cd $GOPATH/src/github.com/stripedpajamas"
+alias src="cd ~/www/src"
+alias atom="src; cd atom"
 
-# rm file interactive
-alias rm='rm -i'
+# git
+alias g="git"
+alias gl="git pull"
+alias gs="git status"
+alias gd="git diff"
+
+# me
+alias code="vscodium"
+nb() {
+	sleep 0.7 && open http://localhost:8000/ &
+	node ~/WebstormProjects/nodebook --notebooks ~/nodebooks
+}
