@@ -105,7 +105,7 @@ shopt -s histappend
 	grep -v "[?*]" | cut -d " " -f2 | \
 	tr ' ' '\n')" scp sftp ssh
 
-for file in ~/.{bash_prompt,aliases,functions,path,dockerfunc,extra,exports}; do
+for file in ~/.{bash_prompt,aliases,functions,dockerfunc,extra,exports}; do
 	if [[ -r "$file" ]] && [[ -f "$file" ]]; then
 		# shellcheck source=/dev/null
 		source "$file"
@@ -115,3 +115,8 @@ unset file
 
 # grit
 source ~/WebstormProjects/grit/grit.sh
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

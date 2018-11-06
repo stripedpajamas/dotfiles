@@ -2,9 +2,10 @@
 
 # go path
 export GOPATH=${HOME}/www/go
+export CARGOBINPATH=${HOME}/.cargo/bin
 
 # update path
 export PATH=/usr/local/bin:${PATH}:/sbin
 
 # add go path
-export PATH="/usr/local/go/bin:${GOPATH}/bin:${PATH}"
+export PATH="/usr/local/go/bin:${GOPATH}/bin:${CARGOBINPATH}:${PATH}"
